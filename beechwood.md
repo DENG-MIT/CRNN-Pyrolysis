@@ -10,6 +10,8 @@ For now, we propose a five species and 10 reactions model, and the number of spe
 
 > I only condier the experimental data during heating up, as I cannot determine the time during cooling down.
 
+> The mass are normalized mass by the initial mass.
+
 **3 out of 4 datasets for training.**
 
 ![5K/min](./results/beechwood/5s10r-01/figs/conditions/pred_exp_1.png)
