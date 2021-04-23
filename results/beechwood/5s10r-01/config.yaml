@@ -6,14 +6,14 @@ nr: 10
 n_train: 3
 batchsize: 256
 
-lb: 1.e-6
-n_epoch: 2500
+lb: 1.e-8
+n_epoch: 5000
 n_plot: 10
 grad_max: 1.e2
 maxiters: 50000
 
-lr_max: 1.e-3
+lr_max: 5.e-3
 lr_min: 1.e-5
 lr_decay: 0.2
-lr_decay_step: 500
+lr_decay_step: 1000
 w_decay: 1.e-8

@@ -1,5 +1,5 @@
 np = nr * (ns + 3) + 1
-p = randn(Float64, np) .* 0.5;
+p = randn(Float64, np) .* 0.05;
 p[1:nr] .+= 0.8;  # w_b
 p[nr * (ns + 1) + 1:nr * (ns + 2)] .+= 0.8;  # w_out
 p[nr * (ns + 2) + 1:end - 1] .+= 0.1;  # w_b | w_Ea
@@ -71,8 +71,8 @@ affect!(integrator) = terminate!(integrator)
 _cb = DiscreteCallback(condition, affect!)
 
 alg = TRBDF2();
-# sense = ForwardSensitivity(autojacvec=true)
-sense = BacksolveAdjoint()
+sense = ForwardSensitivity(autojacvec=true)
+# sense = BacksolveAdjoint()
 # sense = ForwardDiffSensitivity()
 function pred_n_ode(p, i_exp, exp_data)
     global T0, beta, ocen
