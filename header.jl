@@ -11,6 +11,7 @@ using BSON: @save, @load
 using DelimitedFiles
 using YAML
 using XLSX
+using StatsBase
 
 ENV["GKSwstype"] = "100"
 
@@ -31,6 +32,7 @@ n_plot = Int64(conf["n_plot"])
 grad_max = Float64(conf["grad_max"])
 maxiters = Int64(conf["maxiters"])
 n_train = Int64(conf["n_train"])
+batchsize = Int64(conf["batchsize"])
 
 lr_max = Float64(conf["lr_max"])
 lr_min = Float64(conf["lr_min"])

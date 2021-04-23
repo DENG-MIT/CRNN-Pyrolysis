@@ -4,6 +4,7 @@ is_restart: false
 ns: 5
 nr: 10
 n_train: 3
+batchsize: 256
 
 lb: 1.e-6
 n_epoch: 2500
